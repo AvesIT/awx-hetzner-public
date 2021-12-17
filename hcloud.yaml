@@ -1,0 +1,18 @@
+plugin: hetzner.hcloud.hcloud
+token: HCLOUD_TOKEN
+keyed_groups:
+  - key: status
+    prefix: status
+  - key: ansible_distribution
+    prefix: distro
+  - key: labels
+    prefix: ""
+    separator: ""
+    parent_group: labels
+  - key: location
+    parent_group: locations
+    prefix: ""
+    separator: ""
+groups:
+  XXX: inventory_hostname.startswith('XXX') or inventory_hostname.startswith('XXX')
+  YYY: inventory_hostname.startswith('YYY')
